@@ -1,0 +1,4 @@
+<map id="MainWindow::on_pushButton_clear_clicked" name="MainWindow::on_pushButton_clear_clicked">
+<area shape="rect" id="node1" title="Reakcja na kliknięcie przycisku wyczyść." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a7cb26ab94875b363a6dabdfbaafdf4d7" title="Sprawdzenie połączenia." alt="" coords="244,13,453,39"/>
+</map>

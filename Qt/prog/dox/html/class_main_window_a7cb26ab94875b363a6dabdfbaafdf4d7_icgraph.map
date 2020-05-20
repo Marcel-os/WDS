@@ -1,0 +1,9 @@
+<map id="MainWindow::check_connection" name="MainWindow::check_connection">
+<area shape="rect" id="node1" title="Sprawdzenie połączenia." alt="" coords="721,116,931,142"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a4d32584efa9a8d85570c911a76882c2e" title=" " alt="" coords="495,90,661,117"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a2fb2833f4d93295e56d59c71e02ebc52" title="Reakcja na kliknięcie przycisku połącz." alt="" coords="5,26,196,67"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a54df7abe439ccc202b1c9f7d397533be" title="Reakcja na kliknięcie przycisku szukaj." alt="" coords="244,135,435,176"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a04555c17de44068d01450d6f57f5b918" title="Reakcja na kliknięcie przycisku zamknij." alt="" coords="244,200,435,242"/>
+<area shape="rect" id="node6" href="$class_main_window.html#a42f11195758f78967e670779c4535708" title="Czytanie danych z portu szeregowego." alt="" coords="248,33,431,60"/>
+<area shape="rect" id="node7" href="$class_main_window.html#af777763ec745a8eeffe3f9925005fac1" title="Reakcja na kliknięcie przycisku wyczyść." alt="" coords="483,243,673,284"/>
+</map>

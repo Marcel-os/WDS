@@ -1,0 +1,9 @@
+<map id="Rocket::add" name="Rocket::add">
+<area shape="rect" id="node1" title="Dodanie elementów do widgetu." alt="" coords="335,107,427,133"/>
+<area shape="rect" id="node2" href="$class_rocket.html#a0720a5212d6409ba4810e056a51e0a69" title="wyciągnięcie powierzchni na większą długość." alt="" coords="169,5,283,32"/>
+<area shape="rect" id="node4" href="$class_rocket.html#a91c828912a6afafc7d872c227224e142" title="wyciągnięcie powierzchni na mnijszą długość." alt="" coords="165,56,287,83"/>
+<area shape="rect" id="node5" href="$class_rocket.html#a2ffbcf19e677cd8c6fa569601db01037" title="wyciągnięcie czworokąta na większą długość." alt="" coords="177,107,275,133"/>
+<area shape="rect" id="node6" href="$class_rocket.html#ad8f7fa9ce37f5211b65875575b059fe6" title="wyciągnięcie czworokąta na mnijszą długość." alt="" coords="173,157,279,184"/>
+<area shape="rect" id="node7" href="$class_rocket.html#a11480b174f23669a43c72706003a6c32" title="wyciągnięcie trójkąta." alt="" coords="169,208,283,235"/>
+<area shape="rect" id="node3" href="$class_rocket.html#a372a072f1c3a977c40938ba56202ecc6" title=" " alt="" coords="5,107,117,133"/>
+</map>

@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wizualizacja danych z modelu rakiety: Plik źródłowy prog/prj/src/glwidget.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo1.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Wizualizacja danych z modelu rakiety
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('glwidget_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">glwidget.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="glwidget_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** Copyright (C) 2016 The Qt Company Ltd.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">** Contact: https://www.qt.io/licensing/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">** This file is part of the examples of the Qt Toolkit.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">** $QT_BEGIN_LICENSE:BSD$</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">** Commercial License Usage</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">** Licensees holding valid commercial Qt licenses may use this file in</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">** accordance with the commercial license agreement provided with the</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">** Software or, alternatively, in accordance with the terms contained in</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">** a written agreement between you and The Qt Company. For licensing terms</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">** and conditions see https://www.qt.io/terms-conditions. For further</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">** information use the contact form at https://www.qt.io/contact-us.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">** BSD License Usage</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">** Alternatively, you may use this file under the terms of the BSD license</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">** as follows:</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">** &quot;Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">** modification, are permitted provided that the following conditions are</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">** met:</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">**   * Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">**     notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">**   * Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">**     notice, this list of conditions and the following disclaimer in</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">**     the documentation and/or other materials provided with the</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">**     distribution.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">**   * Neither the name of The Qt Company Ltd nor the names of its</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">**     contributors may be used to endorse or promote products derived</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">**     from this software without specific prior written permission.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">** $QT_END_LICENSE$</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">**</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">****************************************************************************/</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="glwidget_8h.html">glwidget.h</a>&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#include &lt;QMouseEvent&gt;</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#include &lt;QOpenGLShaderProgram&gt;</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &lt;QCoreApplication&gt;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_g_l_widget.html#a0de0aca0e1f3a46d14cf33a2e65017f1">GLWidget::m_transparent</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#ab79c391c86de1ffb76f6950b49d82c0c">   66</a></span>&#160;<a class="code" href="class_g_l_widget.html#ab79c391c86de1ffb76f6950b49d82c0c">GLWidget::GLWidget</a>(QWidget *parent)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    : QOpenGLWidget(parent),</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      m_xRot(0),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      m_yRot(0),</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      m_zRot(0),</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      m_program(0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_g_l_widget.html#ac5bd9dcbe7a03728cf06b1f99d1ec113">m_core</a> = QSurfaceFormat::defaultFormat().profile() == QSurfaceFormat::CoreProfile;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// --transparent causes the clear color to be transparent. Therefore, on systems that</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// support it, the widget will become transparent apart from the Rocket.</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_g_l_widget.html#a0de0aca0e1f3a46d14cf33a2e65017f1">m_transparent</a>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        QSurfaceFormat fmt = format();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        fmt.setAlphaBufferSize(8);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        setFormat(fmt);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a535192a4262b4501e5493303834f45d3">   83</a></span>&#160;<a class="code" href="class_g_l_widget.html#a535192a4262b4501e5493303834f45d3">GLWidget::~GLWidget</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_g_l_widget.html#a84c5673c0e92eac927220d368c505c94">cleanup</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a1e50c746ef5d95c14de5907be6239dd1">   88</a></span>&#160;QSize <a class="code" href="class_g_l_widget.html#a1e50c746ef5d95c14de5907be6239dd1">GLWidget::minimumSizeHint</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> QSize(50, 50);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#af04a97931fb78d610e1c73d7c4887319">   93</a></span>&#160;QSize <a class="code" href="class_g_l_widget.html#af04a97931fb78d610e1c73d7c4887319">GLWidget::sizeHint</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> QSize(400, 400);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> qNormalizeAngle(<span class="keywordtype">int</span> &amp;angle)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">while</span> (angle &lt; 0)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        angle += 360 * 16;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">while</span> (angle &gt; 360 * 16)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        angle -= 360 * 16;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a7083404e9ab8feffb2c486f7c15308ce">  114</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a7083404e9ab8feffb2c486f7c15308ce">GLWidget::setXRotation</a>(<span class="keywordtype">int</span> angle)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    qNormalizeAngle(angle);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (angle != <a class="code" href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">m_xRot</a>) {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">m_xRot</a> = angle;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        emit <a class="code" href="class_g_l_widget.html#a3a557b9cd96f7b89661ceaa567c91640">xRotationChanged</a>(angle);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        update();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a29012eba3cb4201f78807066f2c9dcd4">  128</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a29012eba3cb4201f78807066f2c9dcd4">GLWidget::setYRotation</a>(<span class="keywordtype">int</span> angle)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;{</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    qNormalizeAngle(angle);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordflow">if</span> (angle != <a class="code" href="class_g_l_widget.html#ab3af8e3ff9e55161d11395ae1c40f6e1">m_yRot</a>) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="class_g_l_widget.html#ab3af8e3ff9e55161d11395ae1c40f6e1">m_yRot</a> = angle;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        emit <a class="code" href="class_g_l_widget.html#ad47d672d0124b995e82551a95b59badb">yRotationChanged</a>(angle);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        update();</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a6f6b4fbbcc566d999db7e53aadeba889">  142</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a6f6b4fbbcc566d999db7e53aadeba889">GLWidget::setZRotation</a>(<span class="keywordtype">int</span> angle)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;{</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    qNormalizeAngle(angle);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordflow">if</span> (angle != <a class="code" href="class_g_l_widget.html#a0090c1163fbbc400a674b21df5065595">m_zRot</a>) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="class_g_l_widget.html#a0090c1163fbbc400a674b21df5065595">m_zRot</a> = angle;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        emit <a class="code" href="class_g_l_widget.html#ab2035753b19b46105020d6045ac75a79">zRotationChanged</a>(angle);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        update();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a84c5673c0e92eac927220d368c505c94">  156</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a84c5673c0e92eac927220d368c505c94">GLWidget::cleanup</a>()</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a> == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    makeCurrent();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.destroy();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">delete</span> <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a> = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    doneCurrent();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *vertexShaderSourceCore =</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="stringliteral">&quot;#version 150\n&quot;</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="stringliteral">&quot;in vec4 vertex;\n&quot;</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="stringliteral">&quot;in vec3 normal;\n&quot;</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="stringliteral">&quot;out vec3 vert;\n&quot;</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="stringliteral">&quot;out vec3 vertNormal;\n&quot;</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="stringliteral">&quot;uniform mat4 projMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="stringliteral">&quot;uniform mat4 mvMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="stringliteral">&quot;uniform mat3 normalMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="stringliteral">&quot;void main() {\n&quot;</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="stringliteral">&quot;   vert = vertex.xyz;\n&quot;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="stringliteral">&quot;   vertNormal = normalMatrix * normal;\n&quot;</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="stringliteral">&quot;   gl_Position = projMatrix * mvMatrix * vertex;\n&quot;</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *fragmentShaderSourceCore =</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="stringliteral">&quot;#version 150\n&quot;</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="stringliteral">&quot;in highp vec3 vert;\n&quot;</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="stringliteral">&quot;in highp vec3 vertNormal;\n&quot;</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="stringliteral">&quot;out highp vec4 fragColor;\n&quot;</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="stringliteral">&quot;uniform highp vec3 lightPos;\n&quot;</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="stringliteral">&quot;void main() {\n&quot;</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="stringliteral">&quot;   highp vec3 L = normalize(lightPos - vert);\n&quot;</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="stringliteral">&quot;   highp float NL = max(dot(normalize(vertNormal), L), 0.0);\n&quot;</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="stringliteral">&quot;   highp vec3 color = vec3(0.39, 1.0, 0.0);\n&quot;</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="stringliteral">&quot;   highp vec3 col = clamp(color * 0.2 + color * 0.8 * NL, 0.0, 1.0);\n&quot;</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="stringliteral">&quot;   fragColor = vec4(col, 1.0);\n&quot;</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *vertexShaderSource =</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="stringliteral">&quot;attribute vec4 vertex;\n&quot;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="stringliteral">&quot;attribute vec3 normal;\n&quot;</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="stringliteral">&quot;varying vec3 vert;\n&quot;</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="stringliteral">&quot;varying vec3 vertNormal;\n&quot;</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="stringliteral">&quot;uniform mat4 projMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="stringliteral">&quot;uniform mat4 mvMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="stringliteral">&quot;uniform mat3 normalMatrix;\n&quot;</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="stringliteral">&quot;void main() {\n&quot;</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="stringliteral">&quot;   vert = vertex.xyz;\n&quot;</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="stringliteral">&quot;   vertNormal = normalMatrix * normal;\n&quot;</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="stringliteral">&quot;   gl_Position = projMatrix * mvMatrix * vertex;\n&quot;</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *fragmentShaderSource =</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="stringliteral">&quot;varying highp vec3 vert;\n&quot;</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    <span class="stringliteral">&quot;varying highp vec3 vertNormal;\n&quot;</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="stringliteral">&quot;uniform highp vec3 lightPos;\n&quot;</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="stringliteral">&quot;void main() {\n&quot;</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="stringliteral">&quot;   highp vec3 L = normalize(lightPos - vert);\n&quot;</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="stringliteral">&quot;   highp float NL = max(dot(normalize(vertNormal), L), 0.0);\n&quot;</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="stringliteral">&quot;   highp vec3 color = vec3(0.39, 1.0, 0.0);\n&quot;</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="stringliteral">&quot;   highp vec3 col = clamp(color * 0.2 + color * 0.8 * NL, 0.0, 1.0);\n&quot;</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="stringliteral">&quot;   gl_FragColor = vec4(col, 1.0);\n&quot;</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="stringliteral">&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a2349a3ff7c9cc814de1b4a93a0b28acd">  226</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a2349a3ff7c9cc814de1b4a93a0b28acd">GLWidget::initializeGL</a>()</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;{</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">// In this example the widget&#39;s corresponding top-level window can change</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="comment">// several times during the widget&#39;s lifetime. Whenever this happens, the</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// QOpenGLWidget&#39;s associated context is destroyed and a new one is created.</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="comment">// Therefore we have to be prepared to clean up the resources on the</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">// aboutToBeDestroyed() signal, instead of the destructor. The emission of</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="comment">// the signal will be followed by an invocation of initializeGL() where we</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="comment">// can recreate all resources.</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    connect(context(), &amp;QOpenGLContext::aboutToBeDestroyed, <span class="keyword">this</span>, &amp;<a class="code" href="class_g_l_widget.html#a84c5673c0e92eac927220d368c505c94">GLWidget::cleanup</a>);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    initializeOpenGLFunctions();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    glClearColor(0, 0, 0, <a class="code" href="class_g_l_widget.html#a0de0aca0e1f3a46d14cf33a2e65017f1">m_transparent</a> ? 0 : 1);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a> = <span class="keyword">new</span> QOpenGLShaderProgram;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;addShaderFromSourceCode(QOpenGLShader::Vertex, <a class="code" href="class_g_l_widget.html#ac5bd9dcbe7a03728cf06b1f99d1ec113">m_core</a> ? vertexShaderSourceCore : vertexShaderSource);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;addShaderFromSourceCode(QOpenGLShader::Fragment, <a class="code" href="class_g_l_widget.html#ac5bd9dcbe7a03728cf06b1f99d1ec113">m_core</a> ? fragmentShaderSourceCore : fragmentShaderSource);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;bindAttributeLocation(<span class="stringliteral">&quot;vertex&quot;</span>, 0);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;bindAttributeLocation(<span class="stringliteral">&quot;normal&quot;</span>, 1);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;link();</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;bind();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="class_g_l_widget.html#a96b638a88be38f9e70da1b4acb9d4302">m_projMatrixLoc</a> = <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;uniformLocation(<span class="stringliteral">&quot;projMatrix&quot;</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="class_g_l_widget.html#a663f47c6ec2feff55eafa6b29f5f2f9a">m_mvMatrixLoc</a> = <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;uniformLocation(<span class="stringliteral">&quot;mvMatrix&quot;</span>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="class_g_l_widget.html#a59e4fe4df8a228a387e5a03eb104dd9a">m_normalMatrixLoc</a> = <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;uniformLocation(<span class="stringliteral">&quot;normalMatrix&quot;</span>);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="class_g_l_widget.html#a1c0387e8603036181330e836ce6ab232">m_lightPosLoc</a> = <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;uniformLocation(<span class="stringliteral">&quot;lightPos&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// Create a vertex array object. In OpenGL ES 2.0 and OpenGL 2.x</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">// implementations this is optional and support may not be present</span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">// at all. Nonetheless the below code works in all cases and makes</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="comment">// sure there is a VAO when one is needed.</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <a class="code" href="class_g_l_widget.html#a8fab56d622f390f35581d1037295d7a3">m_vao</a>.create();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    QOpenGLVertexArrayObject::Binder vaoBinder(&amp;<a class="code" href="class_g_l_widget.html#a8fab56d622f390f35581d1037295d7a3">m_vao</a>);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="comment">// Setup our vertex buffer object.</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.create();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.bind();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.allocate(<a class="code" href="class_g_l_widget.html#afb0d4d75906b74ac0b3740af0ae34461">m_Rocket</a>.<a class="code" href="class_rocket.html#a90ac96adb5d3b2b3fc4268595e8a026c">constData</a>(), <a class="code" href="class_g_l_widget.html#afb0d4d75906b74ac0b3740af0ae34461">m_Rocket</a>.<a class="code" href="class_rocket.html#ac2d00ba19770e2e3fb714baff2301d54">count</a>() * <span class="keyword">sizeof</span>(GLfloat));</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="comment">// Store the vertex attribute bindings for the program.</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <a class="code" href="class_g_l_widget.html#ab2a6f57a47fa1d0476d1c0ea96a116e4">setupVertexAttribs</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// Our camera never changes in this example.</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <a class="code" href="class_g_l_widget.html#a84f0b8dc23966769cc03a6c1fcc18e42">m_camera</a>.setToIdentity();</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <a class="code" href="class_g_l_widget.html#a84f0b8dc23966769cc03a6c1fcc18e42">m_camera</a>.translate(0, 0, -1.5);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="comment">// Light position is fixed.</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;setUniformValue(<a class="code" href="class_g_l_widget.html#a1c0387e8603036181330e836ce6ab232">m_lightPosLoc</a>, QVector3D(0, 0, 10));</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;release();</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#ab2a6f57a47fa1d0476d1c0ea96a116e4">  279</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#ab2a6f57a47fa1d0476d1c0ea96a116e4">GLWidget::setupVertexAttribs</a>()</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.bind();</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    QOpenGLFunctions *f = QOpenGLContext::currentContext()-&gt;functions();</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    f-&gt;glEnableVertexAttribArray(0);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    f-&gt;glEnableVertexAttribArray(1);</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    f-&gt;glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * <span class="keyword">sizeof</span>(GLfloat), 0);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    f-&gt;glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * <span class="keyword">sizeof</span>(GLfloat), <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span> *<span class="keyword">&gt;</span>(3 * <span class="keyword">sizeof</span>(GLfloat)));</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <a class="code" href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">m_RocketVbo</a>.release();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;}</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a843150d06edc5e2e50d98e395c2b8759">  294</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a843150d06edc5e2e50d98e395c2b8759">GLWidget::paintGL</a>()</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;{</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    glEnable(GL_DEPTH_TEST);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    glEnable(GL_CULL_FACE);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>.setToIdentity();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>.rotate(180.0f - (<a class="code" href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">m_xRot</a> / 16.0f), 1, 0, 0);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>.rotate(<a class="code" href="class_g_l_widget.html#ab3af8e3ff9e55161d11395ae1c40f6e1">m_yRot</a> / 16.0f, 0, 1, 0);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>.rotate(<a class="code" href="class_g_l_widget.html#a0090c1163fbbc400a674b21df5065595">m_zRot</a> / 16.0f, 0, 0, 1);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    QOpenGLVertexArrayObject::Binder vaoBinder(&amp;<a class="code" href="class_g_l_widget.html#a8fab56d622f390f35581d1037295d7a3">m_vao</a>);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;bind();</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;setUniformValue(<a class="code" href="class_g_l_widget.html#a96b638a88be38f9e70da1b4acb9d4302">m_projMatrixLoc</a>, <a class="code" href="class_g_l_widget.html#aee882ee653c98a79e764f803583fee9c">m_proj</a>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;setUniformValue(<a class="code" href="class_g_l_widget.html#a663f47c6ec2feff55eafa6b29f5f2f9a">m_mvMatrixLoc</a>, <a class="code" href="class_g_l_widget.html#a84f0b8dc23966769cc03a6c1fcc18e42">m_camera</a> * <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    QMatrix3x3 normalMatrix = <a class="code" href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">m_world</a>.normalMatrix();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;setUniformValue(<a class="code" href="class_g_l_widget.html#a59e4fe4df8a228a387e5a03eb104dd9a">m_normalMatrixLoc</a>, normalMatrix);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    glDrawArrays(GL_TRIANGLES, 0, <a class="code" href="class_g_l_widget.html#afb0d4d75906b74ac0b3740af0ae34461">m_Rocket</a>.<a class="code" href="class_rocket.html#a24eb5eb84dcf6f2fb7c21c410ee521d9">vertexCount</a>());</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    <a class="code" href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">m_program</a>-&gt;release();</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a71942bbb513fac0a1d4f0c1c24b37def">  321</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a71942bbb513fac0a1d4f0c1c24b37def">GLWidget::resizeGL</a>(<span class="keywordtype">int</span> w, <span class="keywordtype">int</span> h)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <a class="code" href="class_g_l_widget.html#aee882ee653c98a79e764f803583fee9c">m_proj</a>.setToIdentity();</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="class_g_l_widget.html#aee882ee653c98a79e764f803583fee9c">m_proj</a>.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#afeba4699aa12cde94ecd469e58a60aab">  331</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#afeba4699aa12cde94ecd469e58a60aab">GLWidget::mousePressEvent</a>(QMouseEvent *event)</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <a class="code" href="class_g_l_widget.html#aac1f587db6a0e2112fe4c21fc449f470">m_lastPos</a> = <span class="keyword">event</span>-&gt;pos();</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;}</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno"><a class="line" href="class_g_l_widget.html#a7cb45e554d24c2020512aa18949a6230">  340</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_g_l_widget.html#a7cb45e554d24c2020512aa18949a6230">GLWidget::mouseMoveEvent</a>(QMouseEvent *event)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    <span class="keywordtype">int</span> dx = <span class="keyword">event</span>-&gt;x() - <a class="code" href="class_g_l_widget.html#aac1f587db6a0e2112fe4c21fc449f470">m_lastPos</a>.x();</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordtype">int</span> dy = <span class="keyword">event</span>-&gt;y() - <a class="code" href="class_g_l_widget.html#aac1f587db6a0e2112fe4c21fc449f470">m_lastPos</a>.y();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span> (event-&gt;buttons() &amp; Qt::LeftButton) {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <a class="code" href="class_g_l_widget.html#a7083404e9ab8feffb2c486f7c15308ce">setXRotation</a>(<a class="code" href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">m_xRot</a> + 8 * dy);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <a class="code" href="class_g_l_widget.html#a29012eba3cb4201f78807066f2c9dcd4">setYRotation</a>(<a class="code" href="class_g_l_widget.html#ab3af8e3ff9e55161d11395ae1c40f6e1">m_yRot</a> + 8 * dx);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event-&gt;buttons() &amp; Qt::RightButton) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="class_g_l_widget.html#a7083404e9ab8feffb2c486f7c15308ce">setXRotation</a>(<a class="code" href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">m_xRot</a> + 8 * dy);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="class_g_l_widget.html#a6f6b4fbbcc566d999db7e53aadeba889">setZRotation</a>(<a class="code" href="class_g_l_widget.html#a0090c1163fbbc400a674b21df5065595">m_zRot</a> + 8 * dx);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    }</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <a class="code" href="class_g_l_widget.html#aac1f587db6a0e2112fe4c21fc449f470">m_lastPos</a> = <span class="keyword">event</span>-&gt;pos();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_g_l_widget_html_a29012eba3cb4201f78807066f2c9dcd4"><div class="ttname"><a href="class_g_l_widget.html#a29012eba3cb4201f78807066f2c9dcd4">GLWidget::setYRotation</a></div><div class="ttdeci">void setYRotation(int angle)</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00128">glwidget.cpp:128</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_aee882ee653c98a79e764f803583fee9c"><div class="ttname"><a href="class_g_l_widget.html#aee882ee653c98a79e764f803583fee9c">GLWidget::m_proj</a></div><div class="ttdeci">QMatrix4x4 m_proj</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00141">glwidget.h:141</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_afeba4699aa12cde94ecd469e58a60aab"><div class="ttname"><a href="class_g_l_widget.html#afeba4699aa12cde94ecd469e58a60aab">GLWidget::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event) override</div><div class="ttdoc">Rekcja na naciściśnięcie myszy.</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00331">glwidget.cpp:331</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_aac1f587db6a0e2112fe4c21fc449f470"><div class="ttname"><a href="class_g_l_widget.html#aac1f587db6a0e2112fe4c21fc449f470">GLWidget::m_lastPos</a></div><div class="ttdeci">QPoint m_lastPos</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00132">glwidget.h:132</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a6f6b4fbbcc566d999db7e53aadeba889"><div class="ttname"><a href="class_g_l_widget.html#a6f6b4fbbcc566d999db7e53aadeba889">GLWidget::setZRotation</a></div><div class="ttdeci">void setZRotation(int angle)</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00142">glwidget.cpp:142</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ab2035753b19b46105020d6045ac75a79"><div class="ttname"><a href="class_g_l_widget.html#ab2035753b19b46105020d6045ac75a79">GLWidget::zRotationChanged</a></div><div class="ttdeci">void zRotationChanged(int angle)</div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a3eb56ead09651fa425017fc928d7ffcd"><div class="ttname"><a href="class_g_l_widget.html#a3eb56ead09651fa425017fc928d7ffcd">GLWidget::m_RocketVbo</a></div><div class="ttdeci">QOpenGLBuffer m_RocketVbo</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00135">glwidget.h:135</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a663f47c6ec2feff55eafa6b29f5f2f9a"><div class="ttname"><a href="class_g_l_widget.html#a663f47c6ec2feff55eafa6b29f5f2f9a">GLWidget::m_mvMatrixLoc</a></div><div class="ttdeci">int m_mvMatrixLoc</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00138">glwidget.h:138</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a0090c1163fbbc400a674b21df5065595"><div class="ttname"><a href="class_g_l_widget.html#a0090c1163fbbc400a674b21df5065595">GLWidget::m_zRot</a></div><div class="ttdeci">int m_zRot</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00131">glwidget.h:131</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ab2a6f57a47fa1d0476d1c0ea96a116e4"><div class="ttname"><a href="class_g_l_widget.html#ab2a6f57a47fa1d0476d1c0ea96a116e4">GLWidget::setupVertexAttribs</a></div><div class="ttdeci">void setupVertexAttribs()</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00279">glwidget.cpp:279</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_af04a97931fb78d610e1c73d7c4887319"><div class="ttname"><a href="class_g_l_widget.html#af04a97931fb78d610e1c73d7c4887319">GLWidget::sizeHint</a></div><div class="ttdeci">QSize sizeHint() const override</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00093">glwidget.cpp:93</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ac5bd9dcbe7a03728cf06b1f99d1ec113"><div class="ttname"><a href="class_g_l_widget.html#ac5bd9dcbe7a03728cf06b1f99d1ec113">GLWidget::m_core</a></div><div class="ttdeci">bool m_core</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00128">glwidget.h:128</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a96b638a88be38f9e70da1b4acb9d4302"><div class="ttname"><a href="class_g_l_widget.html#a96b638a88be38f9e70da1b4acb9d4302">GLWidget::m_projMatrixLoc</a></div><div class="ttdeci">int m_projMatrixLoc</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00137">glwidget.h:137</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a1c0387e8603036181330e836ce6ab232"><div class="ttname"><a href="class_g_l_widget.html#a1c0387e8603036181330e836ce6ab232">GLWidget::m_lightPosLoc</a></div><div class="ttdeci">int m_lightPosLoc</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00140">glwidget.h:140</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a7083404e9ab8feffb2c486f7c15308ce"><div class="ttname"><a href="class_g_l_widget.html#a7083404e9ab8feffb2c486f7c15308ce">GLWidget::setXRotation</a></div><div class="ttdeci">void setXRotation(int angle)</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00114">glwidget.cpp:114</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a2349a3ff7c9cc814de1b4a93a0b28acd"><div class="ttname"><a href="class_g_l_widget.html#a2349a3ff7c9cc814de1b4a93a0b28acd">GLWidget::initializeGL</a></div><div class="ttdeci">void initializeGL() override</div><div class="ttdoc">Inicjalizuje widglet.</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00226">glwidget.cpp:226</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a7cb45e554d24c2020512aa18949a6230"><div class="ttname"><a href="class_g_l_widget.html#a7cb45e554d24c2020512aa18949a6230">GLWidget::mouseMoveEvent</a></div><div class="ttdeci">void mouseMoveEvent(QMouseEvent *event) override</div><div class="ttdoc">Reakcja na ruch myszy.</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00340">glwidget.cpp:340</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_afc70faba74453cad6003c2846dea7ab7"><div class="ttname"><a href="class_g_l_widget.html#afc70faba74453cad6003c2846dea7ab7">GLWidget::m_world</a></div><div class="ttdeci">QMatrix4x4 m_world</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00143">glwidget.h:143</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a84c5673c0e92eac927220d368c505c94"><div class="ttname"><a href="class_g_l_widget.html#a84c5673c0e92eac927220d368c505c94">GLWidget::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00156">glwidget.cpp:156</a></div></div>
+<div class="ttc" id="aclass_rocket_html_ac2d00ba19770e2e3fb714baff2301d54"><div class="ttname"><a href="class_rocket.html#ac2d00ba19770e2e3fb714baff2301d54">Rocket::count</a></div><div class="ttdeci">int count() const</div><div class="ttdef"><b>Definition:</b> <a href="rocket_8h_source.html#l00027">rocket.h:27</a></div></div>
+<div class="ttc" id="aclass_rocket_html_a90ac96adb5d3b2b3fc4268595e8a026c"><div class="ttname"><a href="class_rocket.html#a90ac96adb5d3b2b3fc4268595e8a026c">Rocket::constData</a></div><div class="ttdeci">const GLfloat * constData() const</div><div class="ttdef"><b>Definition:</b> <a href="rocket_8h_source.html#l00026">rocket.h:26</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ab3af8e3ff9e55161d11395ae1c40f6e1"><div class="ttname"><a href="class_g_l_widget.html#ab3af8e3ff9e55161d11395ae1c40f6e1">GLWidget::m_yRot</a></div><div class="ttdeci">int m_yRot</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00130">glwidget.h:130</a></div></div>
+<div class="ttc" id="aclass_rocket_html_a24eb5eb84dcf6f2fb7c21c410ee521d9"><div class="ttname"><a href="class_rocket.html#a24eb5eb84dcf6f2fb7c21c410ee521d9">Rocket::vertexCount</a></div><div class="ttdeci">int vertexCount() const</div><div class="ttdef"><b>Definition:</b> <a href="rocket_8h_source.html#l00028">rocket.h:28</a></div></div>
+<div class="ttc" id="aglwidget_8h_html"><div class="ttname"><a href="glwidget_8h.html">glwidget.h</a></div><div class="ttdoc">Definicja klasy GLWidget.</div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a84f0b8dc23966769cc03a6c1fcc18e42"><div class="ttname"><a href="class_g_l_widget.html#a84f0b8dc23966769cc03a6c1fcc18e42">GLWidget::m_camera</a></div><div class="ttdeci">QMatrix4x4 m_camera</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00142">glwidget.h:142</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_af8bebb5d9fdbb2fcfc579c6c30996623"><div class="ttname"><a href="class_g_l_widget.html#af8bebb5d9fdbb2fcfc579c6c30996623">GLWidget::m_xRot</a></div><div class="ttdeci">int m_xRot</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00129">glwidget.h:129</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ad47d672d0124b995e82551a95b59badb"><div class="ttname"><a href="class_g_l_widget.html#ad47d672d0124b995e82551a95b59badb">GLWidget::yRotationChanged</a></div><div class="ttdeci">void yRotationChanged(int angle)</div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a59e4fe4df8a228a387e5a03eb104dd9a"><div class="ttname"><a href="class_g_l_widget.html#a59e4fe4df8a228a387e5a03eb104dd9a">GLWidget::m_normalMatrixLoc</a></div><div class="ttdeci">int m_normalMatrixLoc</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00139">glwidget.h:139</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a0de0aca0e1f3a46d14cf33a2e65017f1"><div class="ttname"><a href="class_g_l_widget.html#a0de0aca0e1f3a46d14cf33a2e65017f1">GLWidget::m_transparent</a></div><div class="ttdeci">static bool m_transparent</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00144">glwidget.h:144</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_ab79c391c86de1ffb76f6950b49d82c0c"><div class="ttname"><a href="class_g_l_widget.html#ab79c391c86de1ffb76f6950b49d82c0c">GLWidget::GLWidget</a></div><div class="ttdeci">GLWidget(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00066">glwidget.cpp:66</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a1e50c746ef5d95c14de5907be6239dd1"><div class="ttname"><a href="class_g_l_widget.html#a1e50c746ef5d95c14de5907be6239dd1">GLWidget::minimumSizeHint</a></div><div class="ttdeci">QSize minimumSizeHint() const override</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00088">glwidget.cpp:88</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a843150d06edc5e2e50d98e395c2b8759"><div class="ttname"><a href="class_g_l_widget.html#a843150d06edc5e2e50d98e395c2b8759">GLWidget::paintGL</a></div><div class="ttdeci">void paintGL() override</div><div class="ttdoc">Rysuje widget.</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00294">glwidget.cpp:294</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_abee0cbb96bf623ba55547f68d6948778"><div class="ttname"><a href="class_g_l_widget.html#abee0cbb96bf623ba55547f68d6948778">GLWidget::m_program</a></div><div class="ttdeci">QOpenGLShaderProgram * m_program</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00136">glwidget.h:136</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a535192a4262b4501e5493303834f45d3"><div class="ttname"><a href="class_g_l_widget.html#a535192a4262b4501e5493303834f45d3">GLWidget::~GLWidget</a></div><div class="ttdeci">~GLWidget()</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00083">glwidget.cpp:83</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a3a557b9cd96f7b89661ceaa567c91640"><div class="ttname"><a href="class_g_l_widget.html#a3a557b9cd96f7b89661ceaa567c91640">GLWidget::xRotationChanged</a></div><div class="ttdeci">void xRotationChanged(int angle)</div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a71942bbb513fac0a1d4f0c1c24b37def"><div class="ttname"><a href="class_g_l_widget.html#a71942bbb513fac0a1d4f0c1c24b37def">GLWidget::resizeGL</a></div><div class="ttdeci">void resizeGL(int width, int height) override</div><div class="ttdoc">Zmienia wielkość widgetu.</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8cpp_source.html#l00321">glwidget.cpp:321</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_afb0d4d75906b74ac0b3740af0ae34461"><div class="ttname"><a href="class_g_l_widget.html#afb0d4d75906b74ac0b3740af0ae34461">GLWidget::m_Rocket</a></div><div class="ttdeci">Rocket m_Rocket</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00133">glwidget.h:133</a></div></div>
+<div class="ttc" id="aclass_g_l_widget_html_a8fab56d622f390f35581d1037295d7a3"><div class="ttname"><a href="class_g_l_widget.html#a8fab56d622f390f35581d1037295d7a3">GLWidget::m_vao</a></div><div class="ttdeci">QOpenGLVertexArrayObject m_vao</div><div class="ttdef"><b>Definition:</b> <a href="glwidget_8h_source.html#l00134">glwidget.h:134</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_dfe6bed94bcf04987b38a6f8493ab81c.html">prog</a></li><li class="navelem"><a class="el" href="dir_a2f9ba47153b04dd7b852ac37718876c.html">prj</a></li><li class="navelem"><a class="el" href="dir_73c1560ecb6a1b3fecbf1ac12b7982b6.html">src</a></li><li class="navelem"><a class="el" href="glwidget_8cpp.html">glwidget.cpp</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

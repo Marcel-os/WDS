@@ -1,0 +1,5 @@
+<map id="MainWindow::plot" name="MainWindow::plot">
+<area shape="rect" id="node1" title="Rysuje wykresy." alt="" coords="475,13,600,39"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a42f11195758f78967e670779c4535708" title="Czytanie danych z portu szeregowego." alt="" coords="244,13,427,39"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a2fb2833f4d93295e56d59c71e02ebc52" title="Reakcja na kliknięcie przycisku połącz." alt="" coords="5,5,196,47"/>
+</map>

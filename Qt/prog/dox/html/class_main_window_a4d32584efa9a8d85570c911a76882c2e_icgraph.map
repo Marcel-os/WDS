@@ -1,0 +1,7 @@
+<map id="MainWindow::addToLogs" name="MainWindow::addToLogs">
+<area shape="rect" id="node1" title=" " alt="" coords="483,73,649,100"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a2fb2833f4d93295e56d59c71e02ebc52" title="Reakcja na kliknięcie przycisku połącz." alt="" coords="5,66,196,107"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a54df7abe439ccc202b1c9f7d397533be" title="Reakcja na kliknięcie przycisku szukaj." alt="" coords="244,32,435,74"/>
+<area shape="rect" id="node4" href="$class_main_window.html#a04555c17de44068d01450d6f57f5b918" title="Reakcja na kliknięcie przycisku zamknij." alt="" coords="244,98,435,139"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a42f11195758f78967e670779c4535708" title="Czytanie danych z portu szeregowego." alt="" coords="248,164,431,190"/>
+</map>

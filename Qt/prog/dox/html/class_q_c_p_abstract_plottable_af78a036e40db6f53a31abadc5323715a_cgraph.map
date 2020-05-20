@@ -1,0 +1,42 @@
+<map id="QCPAbstractPlottable::QCPAbstractPlottable" name="QCPAbstractPlottable::QCPAbstractPlottable">
+<area shape="rect" id="node1" title=" " alt="" coords="5,333,164,375"/>
+<area shape="rect" id="node2" href="$class_q_c_p_abstract_plottable.html#a2cdd6f0dd5e9a979037f86b4000d9cfe" title=" " alt="" coords="238,5,389,47"/>
+<area shape="rect" id="node3" href="$class_q_c_p_axis.html#ab988ef4538e2655bb77bd138189cd42e" title=" " alt="" coords="241,71,385,98"/>
+<area shape="rect" id="node4" href="$class_q_c_p_layerable.html#a473edb813a4c1929d6b6a8fe3ff3faf7" title=" " alt="" coords="1989,249,2162,275"/>
+<area shape="rect" id="node5" href="$class_q_custom_plot.html#aeba7733bb9fadfb5a375b3f40de9e58a" title=" " alt="" coords="212,499,415,526"/>
+<area shape="rect" id="node38" href="$class_q_c_p_abstract_plottable.html#a20e266ad646f8c4a7e4631040510e5d9" title=" " alt="" coords="234,551,393,592"/>
+<area shape="rect" id="node40" href="$class_q_c_p_abstract_plottable.html#af47809a644a68ffd955fb30b01fb4f2f" title=" " alt="" coords="238,616,389,657"/>
+<area shape="rect" id="node6" href="$class_q_c_p_abstract_plottable.html#aa64e93cb5b606d8110d2cc0a349bb30f" title=" " alt="" coords="477,463,628,504"/>
+<area shape="rect" id="node29" href="$class_q_custom_plot.html#a0421d647f420b0b4c57aec1708857af5" title=" " alt="" coords="463,529,643,555"/>
+<area shape="rect" id="node30" href="$class_q_c_p_layerable.html#a5ff4862e8c784c9f5986dbc1533ba2a4" title=" " alt="" coords="993,630,1135,657"/>
+<area shape="rect" id="node31" href="$class_q_custom_plot.html#adea38bdc660da9412ba69fb939031567" title=" " alt="" coords="474,681,631,707"/>
+<area shape="rect" id="node32" href="$class_q_c_p_layerable.html#ab0d0da6d2de45a118886d2c8e16d5a54" title=" " alt="" coords="471,630,635,657"/>
+<area shape="rect" id="node7" href="$class_q_c_p_legend.html#a3ab274de52d2951faea45a6d975e6b3f" title=" " alt="" coords="729,478,876,505"/>
+<area shape="rect" id="node26" href="$class_q_c_p_legend.html#a4b90a442af871582df85c2bc13f91e88" title=" " alt="" coords="691,529,915,555"/>
+<area shape="rect" id="node8" href="$class_q_c_p_layout_grid.html#adff1a2ca691ed83d2d24a4cd1fe17012" title=" " alt="" coords="969,478,1159,505"/>
+<area shape="rect" id="node22" href="$class_q_c_p_legend.html#acfe9694c45104a3359d3806ed366fcf7" title=" " alt="" coords="1241,706,1366,733"/>
+<area shape="rect" id="node9" href="$class_q_c_p_layout.html#af6dbbc24156a808da29cd1ec031729a3" title=" " alt="" coords="1215,398,1392,425"/>
+<area shape="rect" id="node15" href="$class_q_c_p_layout_grid.html#a602b426609b4411cf6a93c3ddf3a381a" title=" " alt="" coords="1220,453,1387,479"/>
+<area shape="rect" id="node16" href="$class_q_c_p_layout_grid.html#a886c0dcbabd51a45da399e044552b685" title=" " alt="" coords="1733,530,1910,557"/>
+<area shape="rect" id="node19" href="$class_q_c_p_layout_grid.html#ab0cf4f7edc9414a3bfaddac0f46dc0a0" title=" " alt="" coords="1726,581,1917,607"/>
+<area shape="rect" id="node20" href="$class_q_c_p_layout_element.html#a4efdcbde9d28f410e5ef166c9d691deb" title=" " alt="" coords="1213,605,1393,631"/>
+<area shape="rect" id="node21" href="$class_q_c_p_layout.html#ada26cd17e56472b0b4d7fbbc96873e4c" title=" " alt="" coords="1242,655,1365,682"/>
+<area shape="rect" id="node10" href="$class_q_c_p_layerable.html#a8cbe5a0c9a5674249982f5ca5f8e02bc" title=" " alt="" coords="1474,325,1635,367"/>
+<area shape="rect" id="node12" href="$class_q_c_p_layout_element.html#a765f041a73af0c2de41b41a5a03e31a4" title=" " alt="" coords="1465,391,1645,432"/>
+<area shape="rect" id="node13" href="$class_q_c_p_layerable.html#aa23c893671f1f6744ac235cf2204cf3a" title=" " alt="" coords="1441,457,1668,483"/>
+<area shape="rect" id="node11" href="$class_q_c_p_layerable.html#ab20b7dbd8e0249ed61adb9622c427382" title=" " alt="" coords="1735,376,1908,417"/>
+<area shape="rect" id="node14" href="$class_q_c_p_layerable.html#aa78b7e644d2c519e1a9a6f2ac5fcd858" title=" " alt="" coords="1718,457,1925,483"/>
+<area shape="rect" id="node17" href="$class_q_c_p_layout_grid.html#a1a2962cbf45011405b64b913afa8e7a2" title=" " alt="" coords="1977,555,2174,582"/>
+<area shape="rect" id="node18" href="$class_q_c_p_layout_grid.html#a19c66fd76cbce58a8e94f33797e0c0aa" title=" " alt="" coords="1988,606,2163,633"/>
+<area shape="rect" id="node23" href="$class_q_c_p_layout_grid.html#a4288f174082555f6bd92021bdedb75dc" title=" " alt="" coords="1465,694,1645,721"/>
+<area shape="rect" id="node24" href="$class_q_c_p_layout_grid.html#a9a8942aface780a02445ebcf14c48513" title=" " alt="" coords="1975,694,2176,721"/>
+<area shape="rect" id="node25" href="$class_q_c_p_layout_grid.html#a577223db920e2acb34bc1091080c76d1" title=" " alt="" coords="1716,631,1927,658"/>
+<area shape="rect" id="node27" href="$class_q_c_p_legend.html#a91e790002d8bf15a20628a8e8841e397" title=" " alt="" coords="963,579,1165,606"/>
+<area shape="rect" id="node28" href="$class_q_c_p_legend.html#a57ab86ab8b2a3762d4c1455eb5452c88" title=" " alt="" coords="1475,745,1634,771"/>
+<area shape="rect" id="node33" href="$class_q_c_p_layerable.html#af94484cfb7cbbddb7de522e9be71d9a4" title=" " alt="" coords="707,706,898,733"/>
+<area shape="rect" id="node34" href="$class_q_c_p_layer.html#a57ce5e49364aa9122276d5df3b4a0ddc" title=" " alt="" coords="994,681,1134,707"/>
+<area shape="rect" id="node35" href="$class_q_c_p_layer.html#a37806f662b50b588fb1029a14fc5ef50" title=" " alt="" coords="1003,731,1125,758"/>
+<area shape="rect" id="node36" href="$class_q_c_p_layer.html#a5520019787482e13857ebe631c27c3fa" title=" " alt="" coords="989,782,1139,809"/>
+<area shape="rect" id="node37" href="$class_q_c_p_layer.html#ac2f64ac7761650582d968d86670ef362" title=" " alt="" coords="984,833,1144,859"/>
+<area shape="rect" id="node39" href="$class_q_c_p_selection_decorator.html#af66cb39e308da0285ae5d533e1e85027" title=" " alt="" coords="473,732,633,773"/>
+</map>

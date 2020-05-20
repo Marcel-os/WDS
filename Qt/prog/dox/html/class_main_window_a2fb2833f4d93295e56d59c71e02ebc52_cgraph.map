@@ -1,0 +1,9 @@
+<map id="MainWindow::on_pushButton_polacz_clicked" name="MainWindow::on_pushButton_polacz_clicked">
+<area shape="rect" id="node1" title="Reakcja na kliknięcie przycisku połącz." alt="" coords="5,43,196,85"/>
+<area shape="rect" id="node2" href="$class_main_window.html#a4d32584efa9a8d85570c911a76882c2e" title=" " alt="" coords="484,25,651,52"/>
+<area shape="rect" id="node3" href="$class_main_window.html#a7cb26ab94875b363a6dabdfbaafdf4d7" title="Sprawdzenie połączenia." alt="" coords="699,25,908,52"/>
+<area shape="rect" id="node4" href="$class_main_window.html#abb6f815f858a45ba5b7fc78058e1db0c" title="Usuwa dane z wykresów." alt="" coords="244,76,436,103"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a42f11195758f78967e670779c4535708" title="Czytanie danych z portu szeregowego." alt="" coords="249,127,431,153"/>
+<area shape="rect" id="node6" href="$class_main_window.html#afee6866d714ca4a5a71b58aa58520cc1" title="Dodaje punkt do wykresów." alt="" coords="490,76,645,103"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a415a314d7f9773f30d2ce3a6bd64f010" title="Rysuje wykresy." alt="" coords="505,127,630,153"/>
+</map>
